@@ -1,0 +1,33 @@
+{
+  "name": "ultimate-ai-test",
+  "version": "1.0.0",
+  "description": "Damian Bojar submission for ultimate-ai recruitment",
+  "engines": {
+    "node": ">= 10.13 <11"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^10.14.10",
+    "jest": "^24.8.0",
+    "prettier": "~1.18.2",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "tslint": "~5.18.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-microsoft-contrib": "~6.2.0",
+    "typescript": "~3.5.3"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "Jakub Synowiec <github@jakubsynowiec.info>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "tslib": "~1.10.0"
+  }
+}
